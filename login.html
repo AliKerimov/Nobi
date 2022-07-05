@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log In</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/euclid-circular-a"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/login.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header>
+      <div class="container">
+        <h1>
+          <a href="balance.html"
+            ><img src="images/Group 85.svg" class="logo" alt=""
+          /></a>
+        </h1>
+        <div>
+          <a href="#">Not a member?</a>
+          <a href="#">Sign up now</a>
+        </div>
+      </div>
+    </header>
+    <!--Log in-->
+    <div class="login container">
+      <h1>Log in to Nobi</h1>
+      <div class="google-acc">
+        <p>Log in with Google account</p>
+        <img src="images/google.jpg" alt="" />
+      </div>
+      <p class="gray-txt">or</p>
+      <!--Form-->
+      <form action="">
+        <div class="inputs">
+          <input type="email" id="email" class="input" placeholder=" " />
+          <label for="email" class="focused-labels">Email</label>
+        </div>
+        <div class="inputs">
+          <input
+            type="password"
+            id="password"
+            class="input"
+            placeholder=" "
+          
+          />
+          <label for="password">Password</label>
+          <img
+            src="images/eye 1.svg"
+            style="cursor: pointer"
+            id="show-pass"
+            onclick="myFunction()"
+            alt=""
+          />
+        </div>
+        <a href="#" id="forgot-pass">Forgot password?</a>
+        <div class="login-btn"><a href="balance.html">Log in</a></div>
+      </form>
+    </div>
+    <script src="js/login.js"></script>
+  </body>
+</html>

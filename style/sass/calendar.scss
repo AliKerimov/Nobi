@@ -1,0 +1,313 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "media";
+@import "header";
+body {
+  overflow-x: scroll;
+}
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+#profile-info{
+  height: 40%;
+}
+/*Calendar*/
+.calendar-table > :nth-child(2) {
+  grid-template-rows: repeat(7, 65px);
+}
+.change-month > p {
+  font-size: 19px;
+}
+.change-month > .change-btns {
+  gap: 0px;
+}
+.change-date {
+  display: block;
+  border: none;
+}
+.change-date > * {
+  width: 100%;
+}
+.calendar {
+  margin: 0px;
+  padding: 2% 0%;
+}
+.select-date {
+  // margin-top: 6px;
+  @include flex($justify: flex-start, $align: center);
+}
+.select-date > div {
+  * {
+    padding: 3px 3px;
+  }
+  padding: 5px;
+}
+/*Meets*/
+.mymeets-date {
+  width: 100%;
+  @include text-props($weight: 500);
+}
+.meet-date > div {
+  @include flex($direction: column);
+}
+.calendar-heading {
+  @include flex($justify: space-between, $align: center);
+  * {
+    @include flex($justify: center, $align: center);
+    gap: 10px;
+  }
+}
+.calendar-heading > h1 {
+  @include text-props($size: 24px, $line-height: 32px, $weight: 500);
+}
+.calendar-heading > p {
+  img {
+    cursor: pointer;
+  }
+}
+.calendar {
+  background-color: #ffffff;
+  margin: 3% 0%;
+  padding: 2% 0%;
+}
+.edit-calendar {
+  @include flex($justify: space-between, $align: center);
+  * {
+    @include flex($justify: center, $align: center);
+    gap: 4px;
+  }
+}
+.select-date {
+  width: 100%;
+  @include flex;
+  * {
+    background-color: #f2f2f2;
+  }
+  .gray-txt {
+    color: $gray-color;
+  }
+}
+.select-date div {
+  @include flex($justify: space-between, $align: center);
+  margin-top: 20px;
+  * {
+    padding: 2px;
+    cursor: pointer;
+  }
+}
+.select-date>* {
+  border-radius: $border-radius;
+}
+.border-right {
+  border-right: 1px solid #e0e0e0;
+}
+.border-date{
+  border-right: 1px solid #e0e0e0;
+}
+.select-month {
+  margin-left: 4%;
+}
+.change-date {
+  @include flex($justify: space-between, $align: flex-start,$direction:column);
+  border-bottom: 2px solid $light-gray;
+  padding-bottom: 20px;
+}
+.change-month {
+  @include flex($justify: space-between, $align: center);
+  width: 30%;
+  .change-btns {
+    font-size: 22px;
+    @include flex;
+    gap: 0px;
+    margin-left: 10px;
+    i {
+      padding: 10px;
+      &:hover {
+        background-color: $light-gray;
+        border-radius: $border-radius;
+      }
+    }
+  }
+}
+.change-month > p {
+  @include text-props($size: 20px, $line-height: 32px, $weight: 500);
+}
+.edit-calendar > :first-child {
+  @include text-props($size: 24px, $line-height: 32px);
+}
+.edit-calendar > :nth-child(2) {
+  img {
+    cursor: pointer;
+  }
+}
+.calendar-table > :first-child {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 20px;
+}
+.calendar-table > :nth-child(2) {
+  display: grid;
+  grid-template-rows: repeat(7, 1fr);
+  grid-template-columns: repeat(7, 1fr);
+  margin-top: 10px;
+  li {
+    border: 1px solid $light-gray;
+  }
+}
+.calendar-table > ul {
+  li {
+    @include flex($align: flex-start, $justify: center);
+    padding-top: 5px;
+    cursor: pointer;
+    &:hover {
+      background-color: $light-gray;
+      border-radius: $border-radius;
+    }
+  }
+}
+.days{
+  li{
+    color: #4F4F4F;
+  }
+}
+.gray-days {
+  color: $gray-color;
+}
+
+.meetings {
+  .green-bck {
+    display: none;
+  }
+}
+#meetings{
+  border: 1px solid $green-bck;
+  &:hover{
+    border-radius: 0px;
+  }
+}
+.meetings > p {
+  display: none;
+}
+.meetings {
+  .green-bck {
+    width: 16px;
+    height: 16px;
+    font-size: 10px;
+  }
+}
+.meets-header {
+  padding-bottom: 20px;
+  @include text-props($size: 20px, $line-height: 24px, $weight: 500);
+}
+.meet-date > div {
+  @include flex($justify: flex-start);
+  gap: 10px;
+  padding: 15px 0px;
+  ul {
+    width: 100%;
+    li {
+      padding-bottom: 20px;
+      font-size: 15px;
+      img {
+        margin-right: 2px;
+        margin-bottom: 2px;
+      }
+    }
+  }
+}
+.hyphen {
+  color: $light-gray;
+}
+.video-link {
+  @include flex;
+  margin-top: 10px;
+  margin-left: 15px;
+}
+.video-link > p {
+  width: 32%;
+  span {
+    color: red;
+    margin-left: 1%;
+  }
+}
+/*Media*/
+@include lg {
+  body {
+    overflow-x: hidden;
+  }
+  .main-section {
+    background-color: $light-gray;
+    padding-top: 30px;
+  }
+  .main-section > div {
+    display: grid;
+    grid-template-columns: 2fr 7fr;
+    grid-gap: 20px;
+  }
+  .select-date>div{
+    margin-top: 0px;
+    margin-left: 10px;
+    padding: 10px;
+    *{
+      padding-right: 6px;
+      margin-right: 3px;
+    }
+
+  }
+  .select-date{
+    justify-content: flex-end;
+
+  }
+  .select-month>p{
+    margin-right: 25px;
+  }
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .mymeets-date {
+    width: 16.5%;
+  }
+  .calendar {
+    
+    padding: 2% 4%;
+  }
+  .change-date{
+    @include flex($direction:row);
+  }
+  .meet-date>div{
+    @include flex($direction:row);
+  }
+  .calendar-table > :nth-child(2) {
+    display: grid;
+    grid-template-rows: repeat(7, 80px);
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 20px;
+  }
+  .meetings {
+    background-color: #e6f8f7;
+    text-align: center;
+    position: relative;
+    .green-bck {
+      @include flex($justify: center, $align: center);
+      background-color: $green-bck;
+      border-radius: 50%;
+      color: white;
+      width: 20px;
+      height: 20px;
+      font-size: 12px;
+    }
+  }
+  .meetings > p {
+    position: absolute;
+    top: 50%;
+    gap: 4px;
+    @include flex($align: center, $direction: row);
+    gap: 9px;
+    font-size: 14px;
+  }
+}
+

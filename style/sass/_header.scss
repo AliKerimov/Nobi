@@ -1,0 +1,233 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "media";
+/*Header*/
+.header-none {
+  display: none;
+}
+.container {
+  margin-left: 3%;
+  margin-right: 3%;
+}
+header {
+  height: 7vh;
+  padding: 10px 0px;
+  @include flex($justify: space-between, $align: center);
+  div {
+    @include flex($justify: space-between, $align: center);
+    gap: 20px;
+  }
+}
+#header-schild {
+  margin-left: 8%;
+  @include flex($justify: flex-end);
+  gap: 5%;
+}
+#menu-icon {
+  margin-top: 6px;
+  width: 30px;
+}
+.toggle {
+  position: absolute;
+  left: -300px;
+}
+.sm-menu {
+  left: 0px;
+  top: 0%;
+  height: 100%;
+  width: 65%;
+  z-index: 10;
+  background-color: #ffffff;
+  transition: 0.6s;
+  display: block;
+}
+.sm-menu > :first-child {
+  margin: 10px;
+}
+.sm-menu > :nth-child(2) {
+  margin: 10px 20px;
+  li {
+    padding: 20px;
+    cursor: pointer;
+  }
+}
+.toggle-list > li {
+  a {
+    text-decoration: none;
+    color: #000000;
+  }
+}
+// .profile-toggle {
+//   position: absolute;
+//   left: -300px;
+// }
+// .sm-profile {
+//   right: 0px;
+//   top: 10%;
+//   height: 60%;
+//   width: 65%;
+//   z-index: 10;
+//   background-color: #ffffff;
+//   transition: .6s;
+// }
+.lg-none {
+  @include flex($justify: center, $align: center);
+  margin-right: 17px;
+}
+.lg-none>img{
+  width: 70px;
+}
+.profile-info {
+  display: none;
+}
+.balance-list {
+  background-color: $green-bck;
+  a {
+    color: #ffffff !important;
+  }
+}
+/*Footer*/
+.footer-list > ul {
+  border-bottom: 2px solid $light-gray;
+  border-top: 2px solid $light-gray;
+  @include flex($justify: space-between, $align: center, $direction: column);
+  gap: 14px;
+  text-align: center;
+  padding: 15px 0px;
+  color: $gray-color;
+}
+footer > div {
+  color: $gray-color;
+  @include flex($justify: center, $align: center);
+  gap: 10px;
+}
+.footer-list > ul {
+  width: 100%;
+  li {
+    cursor: pointer;
+  }
+}
+footer > :nth-child(2) {
+  padding: 20px 0px;
+}
+@include lg {
+  .toggle {
+    display: none;
+  }
+  .container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  /*Header*/
+  // .header-flex{
+  //   width: 30%;
+  // }
+  .header-none {
+    display: flex;
+  }
+  .header-text {
+    font-size: 17px;
+    margin-right: 10%;
+  }
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr 4fr;
+    height: 10vh;
+    * {
+      cursor: pointer;
+    }
+    .header-search {
+      position: relative;
+      width: 100%;
+      .input:focus + label {
+        display: none;
+      }
+      img {
+        position: absolute;
+        left: 8%;
+      }
+      label {
+        position: absolute;
+        left: 20%;
+        color: #bdbdbd;
+      }
+      input {
+        border-radius: $border-radius;
+        background-color: #f2f2f2;
+        border: none;
+        cursor: default;
+        padding: 12px 60px;
+      }
+    }
+  }
+  .upload {
+    border-radius: $border-radius;
+    border: 1px solid $green-bck;
+    color: $green-bck;
+    padding: 8px 32px;
+  }
+  .upload:hover {
+    background-color: $green-bck;
+    color: #ffffff;
+  }
+  .lg-none {
+    display: none;
+  }
+  /*Profile Info*/
+  .profile-info {
+    @include flex($justify: flex-start, $align: center, $direction: column);
+    gap: 20px;
+    background-color: #ffffff;
+    border-radius: $border-radius;
+    padding: 40px 0px;
+    max-height: 70%;
+  }
+  .profile-img {
+    width: 60px;
+  }
+  .profile-info > :nth-child(2) {
+    @include text-props($weight: 500, $size: 20px);
+  }
+  .profile-info > :nth-child(3) {
+    color: #4f4f4f;
+  }
+  #right-border {
+    font-size: 14px;
+    padding-right: 5px;
+    margin-right: 2px;
+    border-right: 1px solid #e0e0e0;
+  }
+  .profile-list {
+    width: 80%;
+  }
+  .profile-list > li {
+    margin: 10px 0px;
+    padding: 10px 0px;
+    gap: 15px;
+    padding-left: 15px;
+    text-align: center;
+    @include flex($justify: flex-start, $align: center);
+    border-radius: $border-radius;
+    a {
+      text-decoration: none;
+      color: #000000;
+    }
+  }
+  /*Footer*/
+  footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    margin-left: 5%;
+    margin-right: 5%;
+    div {
+      width: 30%;
+    }
+  }
+  .footer-list > ul {
+    flex-direction: row;
+    margin-right: 20%;
+    border: none;
+  }
+}

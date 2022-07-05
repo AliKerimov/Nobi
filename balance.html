@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balance</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/euclid-circular-a"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/balance.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header class="container">
+      <div class="header-none header-flex">
+        <img src="images/Group 100.svg" alt="" />
+      </div>
+      <div class="header-none header-text">
+        <p>Features</p>
+        <p>Support</p>
+      </div>
+      <div class="lg-none">
+        <img
+          src="images/menu.svg"
+          id="menu-icon"
+          alt=""
+          class="menu-toggle"
+        />
+        <img src="images/Group 670.svg" alt="" />
+      </div>
+
+      <div id="header-schild">
+        <div class="header-none">
+          <div class="header-search">
+            <input type="text" placeholder="Search" />
+            <img src="images/search.svg" alt="" />
+          </div>
+        </div>
+        <div class="upload header-none"><span>Upload</span></div>
+        <img src="images/search.svg" alt="" class="lg-none" />
+        <div>
+        <img src="images/notification.svg" alt="" />
+          <img src="images/Ellipse 93.svg" alt="" class="profile-pic" />
+        </div>
+      </div>
+      <!--JS elements in header-->
+      <div class="toggle">
+        <img src="images/close.svg" class="close" alt="" />
+        <ul class="toggle-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Other menu</a></li>
+          <li><a href="#">Other menu</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Main-->
+    <div class="main-section">
+      <div class="container" id="lg-container">
+         <!--Profile Info-->
+         <div class="profile-info" id="profile-info">
+          <img src="images/Ellipse 93.svg" class="profile-img" alt="" />
+          <p>Ulvin Omarov</p>
+          <p>
+            <span id="right-border">UX Designer</span>
+            <img src="images/star.svg" alt="" />
+            <span>4.7</span>
+          </p>
+          <ul class="profile-list">
+            <li>
+              <img src="images/gallery.svg" alt="" />
+              <a href="#">My Posts</a>
+            </li>
+            <li>
+              <img src="images/calendar.svg" alt="" />
+              <a href="calendar.html">Calendar</a>
+            </li>
+            <li class="balance-list">
+              <img src="images/money.svg" alt="" />
+              <a href="balance.html">Balance</a>
+            </li>
+            <li>
+              <img src="images/gallery.svg" alt="" />
+              <a href="#">Payouts</a>
+            </li>
+            <li>
+              <img src="images/settings.svg" alt="" />
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <img src="images/log out.svg" alt="" />
+              <a href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div>
+        <div>
+          <!--Create an Account-->
+          <div class="create-acc">
+            <div class="balance-sec container" id="lg-container">
+              <h2>Balance</h2>
+              <div class="bankacc-btn">
+                <div><p>Connect bank account</p></div>
+                <div><p>Create bank account</p></div>
+              </div>
+            </div>
+          </div>
+
+          <!--Main-->
+          <div class="main">
+            <!--Total-->
+            <div class="total container">
+              <p>Total:<span>1420 USD</span></p>
+              <div class="withdraw-btn">
+                <p>Withdraw now</p>
+              </div>
+            </div>
+            <div class="container" id="lg-container">
+              <p class="balance-activity">Balance Activity</p>
+            </div>
+            <!--Table-->
+            <table>
+              <tr class="th-none t-head">
+                <td>User</td>
+                <td>Topic</td>
+                <td>Date</td>
+                <td>Total Hour</td>
+                <td>Amount</td>
+                <td>Status</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending">Pending</td>
+              </tr>
+              <tr >
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending sm-none">Pending</td>
+                <td class="tr-none paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid sm-none">Paid</td>
+                <td class="canceled tr-none">Canceled</td>
+              </tr>
+              <tr >
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="canceled sm-none">Canceled</td>
+                <td class="pending tr-none">Pending</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending sm-none">Pending</td>
+                <td class="canceled tr-none">Canceled</td>
+              </tr>
+              <tr class="sm-none">
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending">Pending</td>
+              </tr>
+              <tr class="sm-none">
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="canceled sm-none">Canceled</td>
+                <td class="pending tr-none">Pending</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="canceled">Canceled</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending">Pending</td>
+              </tr>
+              
+              <tr class="sm-none">
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="pending">Pending</td>
+              </tr>
+              <tr class="sm-none">
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+              <tr>
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="canceled">Canceled</td>
+              </tr>
+              <tr class="sm-none">
+                <td>Robert Patinson</td>
+                <td>Grow your creative bu...</td>
+                <td>30.04.2021</td>
+                <td>1h 40min</td>
+                <td>125 USD</td>
+                <td class="paid">Paid</td>
+              </tr>
+            </table>
+            <!--Cards-->
+            <div class="container">
+              <div class="pages-nums">
+                <img src="images/Group 264.svg" alt="" />
+                <span>4</span>
+                <span>5</span>
+                <span>6</span>
+                <span class="sm-none">7</span>
+                <span>..</span>
+                <span>12</span>
+                <img src="images/Group 263.svg" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <!--Footer-->
+      <div class="footer-list">
+        <ul>
+          <li>About us</li>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+        </ul>
+      </div>
+      <div>
+        <img src="images/copyright.svg" alt="" />
+        <p>2021 Nobi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

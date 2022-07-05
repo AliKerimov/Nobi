@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calendar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="http://fonts.cdnfonts.com/css/euclid-circular-a"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style/calendar.css" />
+  </head>
+  <body>
+    <!--Header-->
+    <header class="container">
+      <div class="header-none header-flex">
+        <img src="images/Group 100.svg" alt="" />
+      </div>
+      <div class="header-none header-text">
+        <p>Features</p>
+        <p>Support</p>
+      </div>
+      <div class="lg-none">
+        <img
+          src="images/menu.svg"
+          id="menu-icon"
+          alt=""
+          class="menu-toggle"
+        />
+        <img src="images/Group 670.svg" alt="" />
+      </div>
+
+      <div id="header-schild">
+        <div class="header-none">
+          <div class="header-search">
+            <input type="text" placeholder="Search" />
+            <img src="images/search.svg" alt="" />
+          </div>
+        </div>
+        <div class="upload header-none"><span>Upload</span></div>
+        <img src="images/search.svg" alt="" class="lg-none" style="margin-right: 10px;"/>
+        <div>
+          <img src="images/notification.svg" alt="" />
+          <img src="images/Ellipse 93.svg" alt="" class="profile-pic" />
+        </div>
+      </div>
+      <!--JS elements in header-->
+      <div class="toggle">
+        <img src="images/close.svg" class="close" alt="" />
+        <ul class="toggle-list">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Support</a></li>
+          <li><a href="#">Other menu</a></li>
+          <li><a href="#">Other menu</a></li>
+        </ul>
+      </div>
+    </header>
+    <!--Main-->
+    <div class="main-section">
+      <div class="container">
+        <!--Profile Info-->
+        <div class="profile-info" id="profile-info">
+          <img src="images/Ellipse 93.svg" class="profile-img" alt="" />
+          <p>Ulvin Omarov</p>
+          <p>
+            <span id="right-border">UX Designer</span>
+            <img src="images/star.svg" alt="" />
+            <span>4.7</span>
+          </p>
+          <ul class="profile-list">
+            <li>
+              <img src="images/gallery.svg" alt="" />
+              <a href="#">My Posts</a>
+            </li>
+            <li class="balance-list">
+              <img src="images/calendarw.svg" alt="" />
+              <a href="#">Calendar</a>
+            </li>
+            <li>
+              <img src="images/moneyb.svg" alt="" />
+              <a href="balance.html">Balance</a>
+            </li>
+            <li>
+              <img src="images/gallery.svg" alt="" />
+              <a href="#">Payouts</a>
+            </li>
+            <li>
+              <img src="images/settings.svg" alt="" />
+              <a href="#">Settings</a>
+            </li>
+            <li>
+              <img src="images/log out.svg" alt="" />
+              <a href="login.html">Log out</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <!--Calendar-->
+          <div class="calendar-heading">
+            <h1>Calendar</h1>
+            <p>
+              <img src="images/settings.svg" alt="" />
+              <span>Edit Calendar</span>
+            </p>
+          </div>
+          <div class="calendar">
+            <div class="change-date">
+              <div class="change-month">
+                <p>May,2022</p>
+                <div class="change-btns">
+                  <i class="fa-solid fa-angle-left"></i>
+                  <i class="fa-solid fa-angle-right"></i>
+                </div>
+              </div>
+              <div class="select-date">
+                <div>
+                  <p><span class="gray-txt">From: </span> 9:00</p>
+                  <img
+                    src="images/Vector(1).svg"
+                    class="border-date"
+                    alt=""
+                  />
+                  <p><span class="gray-txt">To: </span> 10:30</p>
+                  <img src="images/Vector(1).svg" alt="" />
+                </div>
+                <div class="select-month">
+                  <p>Whole Month</p>
+                  <img src="images/Vector(1).svg" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="calendar-table">
+              <ul class="days">
+                <li>Mon</li>
+                <li>Tue</li>
+                <li>Wed</li>
+                <li>Thu</li>
+                <li>Fri</li>
+                <li>Sat</li>
+                <li>Sun</li>
+              </ul>
+              <ul>
+                <li class="gray-days">26</li>
+                <li class="gray-days">27</li>
+                <li class="gray-days">28</li>
+                <li class="gray-days">29</li>
+                <li class="gray-days">30</li>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li class="meetings" id="meetings">
+                  <span>5</span>
+                  <p><span class="green-bck">2</span> Meets</p>
+                </li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+                <li>13</li>
+                <li class="meetings" id="meetings">
+                  <span>14</span>
+                  <p><span class="green-bck">1</span> Meet</p>
+                </li>
+                <li>15</li>
+                <li>16</li>
+                <li>17</li>
+                <li>18</li>
+                <li>19</li>
+                <li class="meetings" id="meetings">
+                  <span>20</span>
+                  <p><span class="green-bck">13</span> Meets</p>
+                </li>
+                <li>21</li>
+                <li>22</li>
+                <li>23</li>
+                <li>24</li>
+                <li>25</li>
+                <li>26</li>
+                <li>27</li>
+                <li>28</li>
+                <li>29</li>
+                <li>30</li>
+                <li>31</li>
+                <li class="gray-days">1</li>
+                <li class="gray-days">2</li>
+                <li class="gray-days">3</li>
+                <li class="gray-days">4</li>
+                <li class="gray-days">5</li>
+                <li class="gray-days">6</li>
+              </ul>
+            </div>
+            <h2 class="meets-header">Meets</h2>
+            <div class="meets">
+              <div class="meet-date">
+                <div>
+                  <div class="mymeets-date"><span>May 5,2022</span></div>
+                  <ul class="meet-list">
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        9:00 - 10:30 <span class="hyphen">-</span> “Grow your
+                        creative business in design field”
+                      </p>
+
+                      <div class="video-link">
+                        <p>Video start in: <span>04:17:32</span></p>
+                        <a href="www.nobi.com/videostart%29"
+                          >www.nobi.com/videostart%29</a
+                        >
+                      </div>
+                    </li>
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        11:00 - 12:00
+                        <span class="hyphen">-</span> “Demystifying Inspiration:
+                        Four Ways to Spark Creativity”
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mymeets-date"><span>May 14, 2022</span></div>
+                  <ul>
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        14:00 - 14:30 <span class="hyphen">-</span> “Behind the
+                        design: The app that wants to make freelancers more
+                        successful”
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <div class="mymeets-date"><span>May 20, 2022</span></div>
+                  <ul>
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        8:00 - 9:00 <span class="hyphen">-</span> “Your personal
+                        brand matters: Here are 3 ways you can start investing
+                        in it”
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        9:00 - 11:00 <span class="hyphen">-</span> “5 steps to
+                        designing a personal logo”
+                      </p>
+                    </li>
+                    <li>
+                      <p>
+                        <img src="images/Ellipse 100.svg" alt="" />
+                        17:00 - 18:30 <span class="hyphen">-</span> “5 steps to
+                        finding the right freelance graphic designer”
+                      </p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <!--Footer-->
+      <div class="footer-list">
+        <ul>
+          <li>About us</li>
+          <li>FAQ</li>
+          <li>Privacy</li>
+          <li>Terms</li>
+        </ul>
+      </div>
+      <div>
+        <img src="images/copyright.svg" alt="" />
+        <p>2021 Nobi. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="js/app.js"></script>
+  </body>
+</html>

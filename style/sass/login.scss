@@ -1,0 +1,156 @@
+@import "reset";
+@import "variables";
+@import "mixin";
+@import "media";
+.container {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+.logo{
+  width: 80%;
+}
+a {
+  @include text-props($decoration: none);
+}
+header {
+  border-bottom: 2px solid #f2f2f2;
+}
+header > div {
+  height: 7vh;
+  @include flex($align: center, $justify: space-between);
+  div {
+    width: 60%;
+    @include flex($align: center, $justify: flex-end);
+    gap: 15px;
+    :first-child {
+      color: #4f4f4f;
+    }
+  }
+}
+a{
+    color: $blue-color;
+}
+.login {
+  height: 60vh;
+  @include flex($align: center, $justify: center, $direction: column);
+  .google-acc {
+    padding: 0px 7px;
+    cursor: pointer;
+    height: 55px;
+    background-color: $blue-color;
+    border-radius: $border-radius;
+    color: #ffffff;
+    position: relative;
+    img {
+      position: absolute;
+      width: 45px;
+      left: 4px;
+      border-radius: $border-radius;
+    }
+  }
+  h1 {
+    margin-bottom: 30px;
+    @include text-props($size: 24px, $line-height: 32px, $weight: bold);
+  }
+}
+.login * {
+  width: 100%;
+  @include flex($align: center, $justify: space-evenly, $direction: column);
+}
+#forgot-pass {
+  @include flex($align: end);
+}
+.login-btn {
+  height: 48px;
+  padding: 0px 7px;
+  background-color: #00bba4;
+  border-radius: $border-radius;
+  margin-top: 20px;
+  cursor: pointer;
+  a{
+    color: #ffffff;
+    text-decoration:none;
+  }
+
+}
+.inputs {
+  position: relative;
+  label {
+    position: absolute;
+    @include flex($align: start);
+    left: 10px;
+    top: 30%;
+    width: 10%;
+    color: $gray-color;
+    z-index: 2;
+  }
+  input {
+    height: 56px;
+    border-radius: $border-radius;
+    border: none;
+    margin-bottom: 10px;
+    background-color: #f2f2f2;
+    position: relative;
+    padding-left: 8px;
+    padding-top: 5px;
+    border: none;
+  }
+  input:focus + label{
+    font-size: 12px;
+    top: 10px;
+    transition: .3s;
+    transform: translateY(-50%);
+  }
+  .input:not(:placeholder-shown).input:not(:focus) + label{
+    font-size: 10px;
+    top: 12px;
+  }
+}
+
+.show-pass{
+  cursor: pointer;
+}
+form > :nth-child(2) {
+  position: relative;
+  img {
+    position: absolute;
+    @include text-props($size: 18px);
+    width: 20px;
+    right: 10px;
+    top: 30%;
+  }
+}
+.gray-txt {
+  color: #828282;
+  margin: 20px;
+}
+@include lg {
+  .container {
+    margin: 0 auto;
+  }
+  header {
+    border-bottom: none;
+  }
+  header > div {
+    width: 86%;
+    height: 14vh;
+    @include flex($justify: space-between);
+    div {
+      @include flex($align: flex-end, $justify: flex-end);
+      gap: 20px;
+    }
+  }
+  .login{
+      height: max-content;
+      width: 40%;
+  }
+  .login>h1{
+      margin-bottom: 70px;
+  }
+  .gray-txt{
+      margin: 30px;
+  }
+  .login-btn{
+      margin-top: 35px;
+  }
+}
